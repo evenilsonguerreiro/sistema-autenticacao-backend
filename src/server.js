@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const userRoutes = require('./src/router/userRoutes');
+const userRoutes = require('./router/userRoutes');
 
 const {neon} = require('@neondatabase/serverless');
 
