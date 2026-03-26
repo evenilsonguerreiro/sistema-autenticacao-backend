@@ -1,0 +1,76 @@
+# 🚀 FullTech - Sistema de Autenticação Fullstack
+
+O **FullTech** é uma plataforma robusta de gerenciamento de usuários, desenvolvida para demonstrar a integração de um ecossistema moderno: React no Frontend, Node.js no Backend e PostgreSQL (Neon) como persistência de dados na nuvem.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+### **Frontend**
+- **React 19** + **Vite** (Ambiente de desenvolvimento ultra rápido)
+- **PrimeReact** & **PrimeFlex** (Componentes de interface profissionais)
+- **React Hook Form** (Gestão performática de formulários)
+- **Axios** (Cliente HTTP para comunicação com a API)
+- **Styled Components** (Estilização baseada em componentes)
+
+### **Backend**
+- **Node.js** + **Express** (Servidor API REST)
+- **Neon Database** (PostgreSQL Serverless)
+- **Dotenv** (Gerenciamento de variáveis de ambiente e segurança)
+- **CORS** (Segurança para comunicação entre domínios)
+- **Nodemon** (Reinicialização automática do servidor)
+
+---
+
+## 🛣️ Rotas da API (Endpoints)
+
+O backend responde por padrão na porta `3000`. Abaixo estão os endpoints disponíveis:
+
+| Método | Rota | Descrição | Corpo da Requisição (JSON) |
+| :--- | :--- | :--- | :--- |
+| **GET** | `/` | Verifica se o servidor está online | N/A |
+| **POST** | `/usuarios` | Cadastra um novo usuário no banco | `{ "nome": "...", "email": "...", "senha": "..." }` |
+| **GET** | `/usuarios` | Lista todos os usuários cadastrados | N/A |
+
+---
+
+## 🚀 Como Rodar o Projeto Localmente
+
+Siga o passo a passo para configurar os dois ambientes (Back e Front).
+
+### 📋 Pré-requisitos
+- **Node.js** instalado (versão 18 ou superior)
+- Conta no **[Neon.tech](https://neon.tech/)** (PostgreSQL)
+
+### 🔧 1. Configurando o Backend
+Abra o terminal na pasta `/backend`:
+1. Instale as dependências: `npm install`
+2. Crie um arquivo `.env` na raiz da pasta `/backend` com sua `DATABASE_URL` e `PORT=3000`.
+3. Inicie o servidor: `npm run dev`
+
+### 💻 2. Configurando o Frontend
+Abra outro terminal na pasta `/react-login`:
+1. Instale as dependências: `npm install`
+2. Inicie a aplicação: `npm run dev`
+3. Acesse o link gerado pelo Vite (geralmente `http://localhost:5173`).
+
+---
+
+## 📂 Organização de Pastas (Arquitetura MVC)
+
+O projeto segue o padrão **MVC** para garantir separação de responsabilidades:
+- `backend/src/server.js`: Configurações globais e inicialização do servidor.
+- `backend/src/router/`: Definição de rotas e métodos HTTP.
+- `backend/src/models/`: Lógica de banco de dados e modelos de usuário.
+- `react-login/src/services/`: Configuração do Axios para chamadas à API.
+
+---
+
+## 🛡️ Segurança e Boas Práticas
+- **Proteção de Dados:** Arquivos sensíveis (`.env` e `node_modules`) estão protegidos via `.gitignore`.
+- **CORS:** Implementado para permitir que o React se comunique com o Node de forma segura.
+- **Ambiente:** Variáveis de ambiente utilizadas para evitar exposição de senhas no código-fonte.
+
+---
+
+**Desenvolvido  por [Evenilson da silva almeida](https://github.com/evenilsonguerreiro)**
